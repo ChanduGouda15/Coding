@@ -4,12 +4,12 @@
 using namespace std;
 struct node 
 {
-  int data; //node will store some data
-  struct node *right_child; // right child
-  struct node *left_child; // left child
+  int data; 
+  struct node *right_child; 
+  struct node *left_child; 
 };
 
-//function to create a node
+
 struct node* new_node(int x) 
 {
   struct node *temp;
@@ -21,44 +21,44 @@ struct node* new_node(int x)
   return temp;
 }
 
-// searching operation
+
 struct node* search(struct node * root, int x) 
 {
-  if (root == NULL || root -> data == x) //if root->data is x then the element is found
+  if (root == NULL || root -> data == x) 
     return root;
-  else if (x > root -> data) // x is greater, so we will search the right subtree
+  else if (x > root -> data) 
     return search(root -> right_child, x);
-  else //x is smaller than the data, so we will search the left subtree
+  else 
     return search(root -> left_child, x);
 }
 
-// insertion
+
 struct node* insert(struct node * root, int x) 
 {
-  //searching for the place to insert
+  
   if (root == NULL)
     return new_node(x);
-  else if (x > root -> data) // x is greater. Should be inserted to the right
+  else if (x > root -> data) 
     root -> right_child = insert(root -> right_child, x);
-  else // x is smaller and should be inserted to left
+  else 
     root -> left_child = insert(root -> left_child, x);
   return root;
 }
 
-//function to find the minimum value in a node
+
 struct node* find_minimum(struct node * root) 
 {
   if (root == NULL)
     return NULL;
-  else if (root -> left_child != NULL) // node with minimum value will have no left child
-    return find_minimum(root -> left_child); // left most element will be minimum
+  else if (root -> left_child != NULL) 
+    return find_minimum(root -> left_child); 
   return root;
 }
 
-// deletion
+
 struct node* free(struct node * root, int x) 
 {
-  //searching for the item to be deleted
+  
   if (root == NULL)
     return NULL;
   if (x > root -> data)
@@ -66,13 +66,13 @@ struct node* free(struct node * root, int x)
   else if (x < root -> data)
     root -> left_child = free(root -> left_child, x);
   else {
-    //No Child node
+    
     if (root -> left_child == NULL && root -> right_child == NULL) {
       free(root);
       return NULL;
     }
 
-    //One Child node
+    
     else if (root -> left_child == NULL || root -> right_child == NULL) {
       struct node *temp;
       if (root -> left_child == NULL)
@@ -83,7 +83,7 @@ struct node* free(struct node * root, int x)
       return temp;
     }
 
-    //Two Children
+    
     else {
       struct node *temp = find_minimum(root -> right_child);
       root -> data = temp -> data;
@@ -93,13 +93,13 @@ struct node* free(struct node * root, int x)
   return root;
 }
 
-// Inorder Traversal
+
 void inorder(struct node *root) {
-  if (root != NULL) // checking if the root is not null
+  if (root != NULL) 
   {
-    inorder(root -> left_child); // traversing left child
-    printf(" %d ", root -> data); // printing data at root
-    inorder(root -> right_child); // traversing right child
+    inorder(root -> left_child); 
+    printf(" %d ", root -> data); 
+    inorder(root -> right_child); 
   }
 }
 
