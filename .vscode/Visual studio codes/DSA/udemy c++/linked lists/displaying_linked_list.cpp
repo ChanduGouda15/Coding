@@ -1,25 +1,25 @@
 #include<iostream>
 using namespace std;
 struct Node{
-    int data;
+    int num;
      Node *next;
 };
 
 struct Node *head = NULL;
 
 void insert_node(int n){
-    struct *newNode = new Node;
-    new_Node -> data = n;
-    new_Node -> next = head;
+    struct Node *new_Node = new Node;
+    new_Node->num = n;
+    new_Node->next = head;
     head = new_Node;
 }
 
-void displaying_node()
+void displaying_nodes()
 {
     struct Node *temp=head;
-    while(temp!=NULL{
+    while(temp!=NULL){
         
-        cout<<temp->data->" ";
+        cout<<temp->num<<" ";
         temp=temp->next;
     }
     cout<<endl;
@@ -31,6 +31,6 @@ int main()
     insert_node(30);
     insert_node(40);
     insert_node(50);
-    displaying_node();
+    displaying_nodes();
     return 0;
 }
