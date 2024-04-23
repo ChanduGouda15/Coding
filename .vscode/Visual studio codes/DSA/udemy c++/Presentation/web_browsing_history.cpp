@@ -50,7 +50,7 @@ int main() {
     struct Node* history = NULL;
     char inputUrl[100];
 
-    printf("Enter URLs (type 'exit' to stop):\n");
+    printf("(Enter URLs - type exit to stop):\n");
     while (1) {
         printf("URL: ");
         scanf("%s", inputUrl);
