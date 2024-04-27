@@ -79,14 +79,12 @@ int StackTop(struct Stack st)
 int peek(struct Stack st,int pos)
 {
     int x=-1;
-    int ind = pos-1;
-    if(ind < 0 || ind >= st.size)
+    if(top-pos+1<0)
     {
-        cout<<"invalid postition"<<endl;
+        cout<<"invalid position"<<endl;
     }
-    else
-    {
-        x=st.arr[st.top-ind];
+    else{
+        x=st.s[st.(top-pos+1)];
     }
     return x;
 }
