@@ -2,7 +2,7 @@
 using namespace std;
 struct Node{
     int num;
-     Node *next;
+    struct Node *next;
 };
 
 struct Node *head = NULL;
