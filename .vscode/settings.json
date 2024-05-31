@@ -3,5 +3,6 @@
         "ostream": "cpp",
         "BST.C": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "livePreview.defaultPreviewPath": "/.vscode/Visual studio codes/Web Development/HTML/4.0 File Paths/Folder0/index.html"
 }
