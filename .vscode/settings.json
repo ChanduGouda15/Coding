@@ -1,8 +1,10 @@
 {
     "files.associations": {
         "ostream": "cpp",
-        "BST.C": "cpp"
+        "BST.C": "cpp",
+    "explorer.compactFolders": false
     },
     "C_Cpp.errorSquiggles": "disabled",
-    "livePreview.defaultPreviewPath": "/.vscode/Visual studio codes/Web Development/HTML/4.0 File Paths/Folder0/index.html"
+    "livePreview.defaultPreviewPath": "/.vscode/Visual studio codes/Web Development/HTML/4.0 File Paths/Folder0/index.html",
+    "explorer.compactFolders": false
 }
