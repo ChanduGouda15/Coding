@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+#first{
+    border: 5px solid white;
+    width: 5px;
+}
+#second{
+    color: white;
+    font-family: libre-baskerville-regular;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+    
+
+}
+#third{
+    color:white;
+    text-align: center;
+    
+}
