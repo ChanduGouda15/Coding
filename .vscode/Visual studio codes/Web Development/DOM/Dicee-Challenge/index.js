@@ -10,3 +10,11 @@ if(RandomNumber1>RandomImage2)
     {
         document.querySelector("h1").innerText="Player 1 Wins";
     }
+else if(RandomNumber1<RandomNumber2)
+    {
+        document.querySelector("h1").innerText="Player 2 Wins";
+    }
+else
+{
+    document.querySelector("h1").innerText="Draw";
+}
