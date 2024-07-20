@@ -13,3 +13,7 @@ int main() {
 
     return 0;
 }
+
+//for using for loop
+// int n0.of.digits - log10(n)+1;
+//for(int i=0;i<no.of.digits;i++)
