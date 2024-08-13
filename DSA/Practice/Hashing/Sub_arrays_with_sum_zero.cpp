@@ -13,10 +13,9 @@ void printAllSubarrays(int nums[], int n)
     if(mp.find(sum)!=mp.end())
     {
         auto it = mp.find(sum);
-        while(it!=mp.end() && it->first == sum)
+        if(it!=mp.end() && it->first == sum)
         {
             cout<<"subarray is from"<<" "<<it->second+1<<" "<<"to"<<" "<<i<<endl;
-            it++;
         }
     }
     mp.insert(pair<int,int>(sum,i));
